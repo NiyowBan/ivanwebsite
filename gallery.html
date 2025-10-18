@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gallery | Ivan Fortes</title>
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    background-color: #1e1f22;
+    color: #dcddde;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+  }
+
+  /* ===== HEADER ===== */
+  header {
+    background-color: #2b2d31;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 0;
+    border-bottom: 1px solid #3e4147;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 40px;
+  }
+
+  nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
+
+  nav ul li a:hover {
+    color: #5865f2;
+  }
+
+  /* ===== MAIN CONTENT ===== */
+  main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+    width: 100%;
+  }
+
+  h1 {
+    color: #5865f2;
+    margin-bottom: 25px;
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  /* ===== GALLERY GRID ===== */
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    width: 100%;
+    max-width: 1100px;
+    justify-items: center;
+  }
+
+  .image-card {
+    background-color: #2b2d31;
+    border-radius: 15px;
+    overflow: hidden;
+    width: 100%;
+    max-width: 350px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 25px 15px;
+  }
+
+  .image-card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 6px 14px rgba(0,0,0,0.4);
+  }
+
+  .caption {
+    font-size: 1rem;
+    color: #b9bbbe;
+    margin-bottom: 12px;
+  }
+
+  .view-btn {
+    background-color: #5865f2;
+    border: none;
+    color: white;
+    padding: 10px 18px;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .view-btn:hover {
+    background-color: #4752c4;
+  }
+
+  /* ===== LIGHTBOX ===== */
+  .lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.85);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+  }
+
+  .lightbox img {
+    max-width: 90%;
+    max-height: 85%;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.8);
+  }
+
+  .lightbox.active {
+    display: flex;
+    animation: fadeIn 0.3s ease;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  /* ===== FOOTER ===== */
+  footer {
+    background-color: #2b2d31;
+    text-align: center;
+    padding: 15px 0;
+    border-top: 1px solid #3e4147;
+    font-size: 0.9rem;
+    color: #b9bbbe;
+    width: 100%;
+  }
+
+  footer a {
+    color: #5865f2;
+    text-decoration: none;
+    margin: 0 6px;
+  }
+
+  footer a:hover {
+    text-decoration: underline;
+  }
+
+  @media (max-width: 768px) {
+    main {
+      padding: 25px 10px;
+    }
+  }
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <nav>
+    <ul>
+      <li><a href="MainHome.html">Home</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="business.html">Business</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="feedback.html">Feedback</a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- MAIN CONTENT -->
+<main>
+  <h1>Gallery</h1>
+
+  <div class="gallery-grid">
+    <div class="image-card">
+      <div class="caption">IvanKID1</div>
+      <button class="view-btn" data-image="Ivan1.webp">View My Image</button>
+    </div>
+    <div class="image-card">
+      <div class="caption">IvanKID2</div>
+      <button class="view-btn" data-image="Ivan2.jpg">View My Image</button>
+    </div>
+    <div class="image-card">
+      <div class="caption">5 Man CS</div>
+      <button class="view-btn" data-image="Ivan3.jpg">View My Image</button>
+    </div>
+    <div class="image-card">
+      <div class="caption">Ivan❤️Ellis</div>
+      <button class="view-btn" data-image="Ivan4.jpg">View My Image</button>
+    </div>
+    <div class="image-card">
+      <div class="caption">Ivan Pogi134</div>
+      <button class="view-btn" data-image="Ivan5.jpg">View My Image</button>
+    </div>
+    <div class="image-card">
+      <div class="caption">Ivan Pogi123</div>
+      <button class="view-btn" data-image="Ivan6.jpg">View My Image</button>
+    </div>
+  </div>
+</main>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox">
+  <img src="" alt="Expanded Image">
+</div>
+
+<!-- FOOTER -->
+<footer>
+  © 2025 Ivan Fortes |
+  <a href="#">Privacy</a> |
+  <a href="#">Terms</a> |
+  <a href="#">FAQs</a> |
+  <a href="#">Help</a>
+</footer>
+
+<!-- ===== JS ===== -->
+<script>
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = lightbox.querySelector('img');
+  const buttons = document.querySelectorAll('.view-btn');
+
+  buttons.forEach(button => {
+    button.addEventListener('click', () => {
+      const imgSrc = button.getAttribute('data-image');
+      lightboxImg.src = imgSrc;
+      lightbox.classList.add('active');
+    });
+  });
+
+  lightbox.addEventListener('click', () => {
+    lightbox.classList.remove('active');
+  });
+
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') lightbox.classList.remove('active');
+  });
+</script>
+
+</body>
+</html>

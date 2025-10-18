@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>About | Ivan Fortes</title>
+
+<!-- Font Awesome for Social Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    background-color: #1e1f22;
+    color: #dcddde;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+
+  /* ---------- Header ---------- */
+  header {
+    background-color: #2b2d31;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 0;
+    border-bottom: 1px solid #3e4147;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 40px;
+  }
+
+  nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
+
+  nav ul li a:hover {
+    color: #5865f2;
+  }
+
+  /* ---------- Main Section ---------- */
+  main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 40px;
+  }
+
+  .about-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    max-width: 1200px;
+    flex-wrap: wrap;
+  }
+
+  .about-image {
+    flex: 1 1 400px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .about-image img {
+    width: 100%;
+    max-width: 450px;
+    border-radius: 20px;
+    box-shadow: 0 0 25px rgba(0,0,0,0.4);
+  }
+
+  .about-text {
+    flex: 1 1 450px;
+    color: #dcddde;
+  }
+
+  .about-text h1 {
+    color: #5865f2;
+    font-size: 2.3rem;
+    margin-bottom: 10px;
+  }
+
+  .about-text h4 {
+    font-weight: normal;
+    color: #b9bbbe;
+    line-height: 1.6;
+    margin-bottom: 25px;
+  }
+
+  .about-text button {
+    background-color: #5865f2;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+
+  .about-text button:hover {
+    background-color: #4752c4;
+  }
+
+  /* ---------- Social Icons ---------- */
+  .social-links {
+    display: flex;
+    justify-content: flex-end;
+    gap: 25px;
+    margin: 30px 50px 10px 0;
+    font-size: 1.7rem;
+  }
+
+  .social-links a {
+    transition: transform 0.3s ease;
+  }
+
+  .social-links a:hover {
+    transform: scale(1.2);
+  }
+
+  .fa-facebook { color: #1877f2; }
+  .fa-instagram { color: #e4405f; }
+  .fa-envelope { color: #d44638; }
+  .fa-discord { color: #5865f2; }
+
+  /* ---------- Footer ---------- */
+  footer {
+    background-color: #2b2d31;
+    text-align: center;
+    padding: 15px 0;
+    border-top: 1px solid #3e4147;
+    font-size: 0.9rem;
+    color: #b9bbbe;
+    width: 100%;
+  }
+
+  footer a {
+    color: #5865f2;
+    text-decoration: none;
+    margin: 0 6px;
+  }
+
+  footer a:hover {
+    text-decoration: underline;
+  }
+
+  @media (max-width: 900px) {
+    .about-container {
+      flex-direction: column;
+      text-align: center;
+    }
+    .about-image img {
+      max-width: 350px;
+    }
+    .social-links {
+      justify-content: center;
+      margin-right: 0;
+    }
+  }
+</style>
+</head>
+<body>
+
+<!-- Header -->
+<header>
+  <nav>
+    <ul>
+      <li><a href="MainHome.html">Home</a></li>
+      <li><a href="Gallery.html">Gallery</a></li>
+      <li><a href="Business.html">Business</a></li>
+      <li><a href="Blog.html">Blog</a></li>
+      <li><a href="About.html" style="color: #5865f2;">About</a></li>
+      <li><a href="Feedback.html">Feedback</a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- About Section -->
+<main>
+  <div class="about-container">
+    <div class="about-image">
+      <img src="fACEMASK.jpg" alt="Picture">
+    </div>
+    <div class="about-text">
+      <h1>Game Developer</h1>
+      <h4>Hello! I'm <strong>John Ivan Fortes</strong>, passionate about technology, coding, and creativity.  
+      I love building things that make life easier and look great while doing it. I want to learn more about on how will improvement
+    my skills to be a game dev.</h4>
+      <button>Get Started</button>
+    </div>
+  </div>
+</main>
+
+<!-- Social Media Icons -->
+<div class="social-links">
+  <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+  <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+  <a href="mailto:youremail@example.com"><i class="fa-solid fa-envelope"></i></a>
+  <a href="https://discord.com" target="_blank"><i class="fab fa-discord"></i></a>
+</div>
+
+<!-- Footer -->
+<footer>
+  © 2025 Ivan Fortes |
+  <a href="#">Privacy</a> |
+  <a href="#">Terms</a> |
+  <a href="#">FAQs</a> |
+  <a href="#">Help</a>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Feedback | Ivan Fortes</title>
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    background-color: #1e1f22;
+    color: #dcddde;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+  }
+
+  /* ---------- Header ---------- */
+  header {
+    background-color: #2b2d31;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 0;
+    border-bottom: 1px solid #3e4147;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 40px;
+  }
+
+  nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
+
+  nav ul li a:hover {
+    color: #5865f2;
+  }
+
+  /* ---------- Main ---------- */
+  main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 60px 20px;
+  }
+
+  h1 {
+    font-size: 2.3rem;
+    color: #5865f2;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+
+  p {
+    color: #b9bbbe;
+    margin-bottom: 40px;
+    max-width: 600px;
+    line-height: 1.6;
+    text-align: center;
+  }
+
+  form {
+    background-color: #2b2d31;
+    border: 1px solid #3e4147;
+    border-radius: 15px;
+    padding: 30px 40px;
+    box-shadow: 0 0 20px rgba(88, 101, 242, 0.35);
+    width: 100%;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  label {
+    text-align: left;
+    color: #fff;
+    font-weight: 500;
+    margin-bottom: 5px;
+  }
+
+  .input-container {
+    position: relative;
+  }
+
+  .input-container input,
+  .input-container textarea {
+    width: 100%;
+    padding: 12px 14px 12px 40px;
+    border: 2px solid #5865f2;
+    border-radius: 10px;
+    background-color: #1e1f22;
+    color: #fff;
+    font-size: 1rem;
+    transition: box-shadow 0.3s ease, border-color 0.3s ease;
+  }
+
+  .input-container input::placeholder,
+  .input-container textarea::placeholder {
+    color: #b9bbbe;
+  }
+
+  .input-container input:hover,
+  .input-container textarea:hover {
+    box-shadow: 0 0 10px rgba(88, 101, 242, 0.6);
+  }
+
+  /* ✅ FIXED: icon style (no italics) */
+  .input-container i {
+    position: absolute;
+    top: 50%;
+    left: 12px;
+    transform: translateY(-50%);
+    color: #b9bbbe;
+    pointer-events: none;
+    font-size: 1.1rem;
+    font-style: normal; /* <-- this removes italic style */
+  }
+
+  textarea {
+    resize: none;
+    height: 120px;
+    padding-left: 14px;
+  }
+
+  button {
+    background-color: #5865f2;
+    color: #fff;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  button:hover {
+    background-color: #4752c4;
+    box-shadow: 0 0 15px rgba(88, 101, 242, 0.7);
+  }
+
+  /* ---------- Footer ---------- */
+  footer {
+    background-color: #2b2d31;
+    text-align: center;
+    padding: 15px 0;
+    border-top: 1px solid #3e4147;
+    font-size: 0.9rem;
+    color: #b9bbbe;
+    width: 100%;
+  }
+
+  footer a {
+    color: #5865f2;
+    text-decoration: none;
+    margin: 0 6px;
+  }
+
+  footer a:hover {
+    text-decoration: underline;
+  }
+
+  @media (max-width: 768px) {
+    form {
+      padding: 25px;
+    }
+  }
+</style>
+</head>
+<body>
+
+<!-- Header -->
+<header>
+  <nav>
+    <ul>
+      <li><a href="MainHome.html">Home</a></li>
+      <li><a href="Gallery.html">Gallery</a></li>
+      <li><a href="Business.html">Business</a></li>
+      <li><a href="Blog.html">Blog</a></li>
+      <li><a href="About.html">About</a></li>
+      <li><a href="Feedback.html" style="color: #5865f2;">Feedback</a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- Main Content -->
+<main>
+  <h1>Feedback</h1>
+  <p>Share your thoughts or feedback on our services so we could better understand your needs.</p>
+
+  <form>
+    <div>
+      <label for="fname">Name (required)*</label>
+      <div class="input-container">
+        <i>☺︎</i>
+        <input type="text" id="fname" name="fname" placeholder="First Name" title="Please fill out." required>
+      </div>
+    </div>
+
+    <div class="input-container">
+      <i>☺︎</i>
+      <input type="text" id="lname" name="lname" placeholder="Last Name" title="Please fill out." required>
+    </div>
+
+    <div>
+      <label for="email">Email*</label>
+      <div class="input-container">
+        <i>📩</i>
+        <input type="email" id="email" name="email" placeholder="Enter your email" title="Please fill out." required>
+      </div>
+    </div>
+
+    <div>
+      <label for="feedback">Your Feedback</label>
+      <div class="input-container">
+        <textarea id="feedback" name="feedback" placeholder="Write your Feedback messages, Suggestion, Bug report etc." title="Please fill out." required></textarea>
+      </div>
+    </div>
+
+    <button type="submit">Submit Feedback</button>
+  </form>
+</main>
+
+<!-- Footer -->
+<footer>
+  © 2025 Ivan Fortes |
+  <a href="#">Privacy</a> |
+  <a href="#">Terms</a> |
+  <a href="#">FAQs</a> |
+  <a href="#">Help</a>
+</footer>
+
+</body>
+</html>
